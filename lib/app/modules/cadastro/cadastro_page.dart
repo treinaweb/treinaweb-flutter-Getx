@@ -9,7 +9,7 @@ class CadastroPage extends GetView<CadastroController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Cadastro'),
+          title: Text('Cadastro ${controller.count}'),
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {}, child: const Icon(Icons.add)),

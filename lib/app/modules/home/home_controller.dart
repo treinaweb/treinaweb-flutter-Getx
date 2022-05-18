@@ -15,6 +15,6 @@ class HomeController extends GetxController {
   }
 
   void acessNextPage() {
-    Get.toNamed(Routes.CADASTRO);
+    Get.toNamed(Routes.CADASTRO, arguments: count);
   }
 }

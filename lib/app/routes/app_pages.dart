@@ -1,3 +1,4 @@
+import 'package:contador/app/modules/cadastro/cadastro_binding.dart';
 import 'package:contador/app/modules/cadastro/cadastro_page.dart';
 import 'package:contador/app/modules/home/home_binding.dart';
 import 'package:contador/app/modules/home/home_page.dart';
@@ -13,6 +14,9 @@ class AppPage {
       page: () => const HomePage(),
       binding: HomeBinding(),
     ),
-    GetPage(name: Routes.CADASTRO, page: () => const CadastroPage()),
+    GetPage(
+        name: Routes.CADASTRO,
+        page: () => const CadastroPage(),
+        binding: CadastroBinding()),
   ];
 }
