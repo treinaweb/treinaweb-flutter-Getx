@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomePage extends GetView<HomeController> {
-  HomePage({Key? key}) : super(key: key);
-
-  @override
-  final controller = Get.put(HomeController());
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +19,7 @@ class HomePage extends GetView<HomeController> {
       body: Center(
         child: Text(
           controller.count.toString(),
-          style: TextStyle(fontSize: 100),
+          style: const TextStyle(fontSize: 100),
         ),
       ),
     );
