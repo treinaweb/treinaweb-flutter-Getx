@@ -1,3 +1,4 @@
+import 'package:contador/app/data/provider/provider_binding.dart';
 import 'package:contador/app/routes/app_pages.dart';
 import 'package:contador/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      initialBinding: MyApiClientBinding(),
       title: 'Flutter Demo',
       theme: ThemeData(
         useMaterial3: true,
