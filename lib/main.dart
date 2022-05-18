@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       getPages: AppPage.routes,
-      initialRoute: Routes.CADASTRO,
+      initialRoute: Routes.HOME,
     );
   }
 }

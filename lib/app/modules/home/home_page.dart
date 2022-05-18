@@ -32,6 +32,10 @@ class HomePage extends GetView<HomeController> {
                 controller.count2.toString(),
                 style: const TextStyle(fontSize: 100),
               ),
+            ),
+            OutlinedButton(
+              onPressed: controller.acessNextPage,
+              child: const Text('Acessar'),
             )
           ],
         ),
