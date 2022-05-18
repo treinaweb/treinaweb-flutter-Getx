@@ -1,3 +1,5 @@
+import 'package:contador/app/routes/app_pages.dart';
+import 'package:contador/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,9 +20,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Container(
-        color: Colors.red,
-      ),
+      getPages: AppPage.routes,
+      initialRoute: Routes.HOME,
     );
   }
 }
