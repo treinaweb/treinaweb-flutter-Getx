@@ -6,6 +6,6 @@ class AppPage {
   AppPage._();
 
   static final routes = <GetPage>[
-    GetPage(name: Routes.HOME, page: () => const HomePage())
+    GetPage(name: Routes.HOME, page: () => HomePage())
   ];
 }
