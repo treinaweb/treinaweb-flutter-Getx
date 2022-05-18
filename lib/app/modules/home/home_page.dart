@@ -17,9 +17,23 @@ class HomePage extends GetView<HomeController> {
         child: const Icon(Icons.add),
       ),
       body: Center(
-        child: Text(
-          controller.count.toString(),
-          style: const TextStyle(fontSize: 100),
+        child: Column(
+          children: [
+            GetBuilder<HomeController>(
+              builder: (controll) {
+                return Text(
+                  controll.count.toString(),
+                  style: const TextStyle(fontSize: 100),
+                );
+              },
+            ),
+            Obx(
+              () => Text(
+                controller.count2.toString(),
+                style: const TextStyle(fontSize: 100),
+              ),
+            )
+          ],
         ),
       ),
     );
