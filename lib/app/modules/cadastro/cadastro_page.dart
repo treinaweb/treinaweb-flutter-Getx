@@ -12,7 +12,7 @@ class CadastroPage extends GetView<CadastroController> {
           title: Text('Cadastro ${controller.count}'),
         ),
         floatingActionButton: FloatingActionButton(
-            onPressed: () {}, child: const Icon(Icons.add)),
+            onPressed: controller.addUser, child: const Icon(Icons.add)),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -20,18 +20,20 @@ class CadastroPage extends GetView<CadastroController> {
                 padding: const EdgeInsets.only(bottom: 30),
                 child: Form(
                   child: Row(
-                    children: const [
+                    children: [
                       Expanded(
                         child: TextField(
-                          decoration: InputDecoration(labelText: 'Nome'),
+                          controller: controller.nameController,
+                          decoration: const InputDecoration(labelText: 'Nome'),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Expanded(
                         child: TextField(
-                          decoration: InputDecoration(labelText: 'Idade'),
+                          controller: controller.idadeController,
+                          decoration: const InputDecoration(labelText: 'Idade'),
                         ),
                       ),
                     ],
@@ -41,15 +43,19 @@ class CadastroPage extends GetView<CadastroController> {
               SizedBox(
                 width: context.width,
                 height: context.height,
-                child: ListView.builder(
-                  itemBuilder: (ctx, i) {
-                    return ListTile(
-                      title: Text("$i"),
-                      subtitle: Text('Minha idade é: $i'),
-                    );
-                  },
+                child: Obx(
+                  () => ListView.builder(
+                    itemCount: controller.listUser.length,
+                    itemBuilder: (ctx, i) {
+                      final user = controller.listUser[i];
+                      return ListTile(
+                        title: Text(user.name),
+                        subtitle: Text('Minha idade é: ${user.idade}'),
+                      );
+                    },
+                  ),
                 ),
-              )
+              ),
             ],
           ),
         ));

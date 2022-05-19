@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
 
 class MyAppClient extends GetConnect {
-  final String _baseUrl = "http://localhost:3002/api";
+  final String _baseUrl = "http://10.0.2.2:3002/api";
   @override
   void onInit() {
     httpClient.baseUrl = _baseUrl;
